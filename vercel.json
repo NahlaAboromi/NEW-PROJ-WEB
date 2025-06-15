@@ -4,20 +4,11 @@
     {
       "src": "hw2-frontend/package.json",
       "use": "@vercel/static-build",
-      "config": { "outputDirectory": "dist" }
+      "config": { "outputDirectory": "hw2-frontend/dist" }
     },
     {
       "src": "api/app.js",
       "use": "@vercel/node"
     }
-  ],
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
-    }
-  ],
-  "env": {
-    "NODE_ENV": "production"
-  }
+  ]
 }
