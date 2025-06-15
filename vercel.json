@@ -18,10 +18,10 @@
     },
     {
       "src": "/(.*)",
-      "dest": "/hw2-frontend/index.html"
+      "dest": "/hw2-frontend/$1"
     }
   ],
   "env": {
     "NODE_ENV": "production"
   }
-}
+} 
