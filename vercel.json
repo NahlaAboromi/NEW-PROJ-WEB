@@ -14,7 +14,7 @@
   "rewrites": [
     {
       "source": "/(.*)",
-      "destination": "/hw2-frontend/dist/index.html"
+      "destination": "/index.html"
     }
   ],
   "env": {
