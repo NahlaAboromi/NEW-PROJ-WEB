@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useNotifications } from '../hooks/NotificationsContext'; 
 import { ThemeContext } from '../DarkLightMood/ThemeContext';
@@ -67,7 +67,9 @@ const getTypeIcon = (type) => {
         </div>
       );
     }
-    
+      useEffect(() => {
+    fetchNotifications();
+  }, []);
     return (
       <img
         src={lecturer.profilePic}
@@ -283,7 +285,7 @@ const getTypeIcon = (type) => {
                       <div className="flex-1">
                         <p className="text-sm font-medium">{notification.title}</p>
                         <p className={`text-xs ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'} mt-1`}>
-                          {notification.time}
+                          {new Date(notification.time).toLocaleString()}
                         </p>
                       </div>
                       
