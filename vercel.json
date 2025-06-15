@@ -11,16 +11,14 @@
       "use": "@vercel/node"
     }
   ],
-  "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "/api/app.js"
-    }
-  ],
   "rewrites": [
     {
+      "source": "/api/(.*)",
+      "destination": "/api/app.js"
+    },
+    {
       "source": "/(.*)",
-      "destination": "/hw2-frontend/dist/index.html"
+      "destination": "/index.html"
     }
   ],
   "env": {
